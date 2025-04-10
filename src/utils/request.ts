@@ -1,32 +1,12 @@
 import axios from 'axios'
 import { message as Message } from 'antd'
 import { history } from 'umi';
-import {currentEnv, Env} from "@/eth/deploy";
+import config from '@/eth/config';
 const qs = require('qs');
-
-const host = () => {
-  switch (currentEnv) {
-    // @ts-ignore
-    case Env.TESTINNER: {
-      return 'https://2ejpnc8qpxbc5k6f4fd6b5msbd-test3.yala.org/' 
-    }
-    // @ts-ignore
-    case Env.TESTNET: {
-      return 'https://api-testnet.yala.org/'
-    }
-    // @ts-ignore
-    case Env.PROD: {
-      return 'https://api-testnet.yala.org/'
-    }
-    default :{
-      return ''
-    }
-  }
-}
 
 axios.defaults.headers['Content-Type'] = 'application/json'
 const service = axios.create({
-  baseURL: host(),
+  baseURL: config.HOST_API,
   timeout: 120000
 })
 
