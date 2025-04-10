@@ -148,7 +148,7 @@ export default defineConfig({
   codeSplitting:{
     jsStrategy: 'granularChunks'
   },
-  history: { type: 'hash' },
+  // history: { type: 'hash' },
   links: [
     { href: 'https://yala.org', rel: 'canonical' }
   ],
