@@ -141,7 +141,7 @@ export default defineConfig({
     baseSeparator: '-',
   },
   hash: true,
-  exportStatic: {},
+  // exportStatic: {},
   esbuildMinifyIIFE: true,
   fastRefresh: true,
   jsMinifier: 'terser',
