@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "author": "1570228878a <carlos@yala.org>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/pro-components": "^2.7.10",
+    "@ethersproject/providers": "^5.8.0",
+    "@umijs/max": "^4.3.27",
+    "@web3-onboard/core": "^2.24.0",
+    "@web3-onboard/injected-wallets": "^2.11.3",
+    "antd": "^5.18.3",
+    "axios": "^1.8.4",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "bignumber.js": "^9.1.2",
+    "ethers": "5.7.2",
+    "qs": "^6.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3"
+  }
+}

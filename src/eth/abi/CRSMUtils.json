@@ -1,0 +1,362 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "contract ICRSMFactory",
+          "name": "_factory",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IDebtToken",
+          "name": "_debtToken",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "debtToken",
+      "outputs": [
+        {
+          "internalType": "contract IDebtToken",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "internalType": "contract ICRSMFactory",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "start",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "end",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCRSM",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract ICRSM",
+              "name": "crsm",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ICR",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "contract ITroveManager",
+                  "name": "troveManager",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "troveId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "TRGCR",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "TARCR",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "MAX_TARCR",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "DEBT_GAS_COMPENSATION",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deposits",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "yieldGains",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "debtTokenBalance",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "contract IERC20[]",
+                  "name": "collateralTokens",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "collateralGains",
+                  "type": "uint256[]"
+                }
+              ],
+              "internalType": "struct ICRSM.State",
+              "name": "crsmState",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "debt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "coll",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "stake",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "interest",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ITroveManager.Trove",
+              "name": "trove",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct CRSMUtils.CRSMState[]",
+          "name": "states",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "totalSupply",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "start",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "end",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCRSMByOwner",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract ICRSM",
+              "name": "crsm",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ICR",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "contract ITroveManager",
+                  "name": "troveManager",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "troveId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "TRGCR",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "TARCR",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "MAX_TARCR",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "DEBT_GAS_COMPENSATION",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "deposits",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "yieldGains",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "debtTokenBalance",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "contract IERC20[]",
+                  "name": "collateralTokens",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "uint256[]",
+                  "name": "collateralGains",
+                  "type": "uint256[]"
+                }
+              ],
+              "internalType": "struct ICRSM.State",
+              "name": "crsmState",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "debt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "coll",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "stake",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "interest",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ITroveManager.Trove",
+              "name": "trove",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct CRSMUtils.CRSMState[]",
+          "name": "states",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "totalSupply",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ICRSM[]",
+          "name": "crsms",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "repay",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+]

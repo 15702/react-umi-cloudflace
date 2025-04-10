@@ -1,0 +1,92 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "srcHash",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "string",
+                "name": "receiver",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "requestRefund",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "nonce",
+                "type": "uint256"
+            }
+        ],
+        "name": "confirmRefund",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "refundRequests",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "srcHash",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "contract IBridgeToken",
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "endAt",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "limit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "receiver",
+                "type": "string"
+            },
+            {
+                "internalType": "enum INotaryCustodyBridge.RefundStatus",
+                "name": "status",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

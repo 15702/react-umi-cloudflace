@@ -1,0 +1,541 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "contract IBorrowerOperations",
+          "name": "_borrowerOperations",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "borrowerOperations",
+      "outputs": [
+        {
+          "internalType": "contract IBorrowerOperations",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ITroveManager",
+          "name": "troveManager",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSingleTrove",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "CCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "MCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "SCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "TCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "LIQUIDATION_PENALTY_SP",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalColl",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalInterest",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSystemDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "interestRate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minNetDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "accountCollSurplus",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasShutdown",
+              "type": "bool"
+            },
+            {
+              "internalType": "contract ITroveManager",
+              "name": "troveManager",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct MultiTroveGetters.Params",
+          "name": "params",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ICR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "entireDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxDebtToMint",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxCollToWithdraw",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "liquidationPrice",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "debt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "coll",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "stake",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "interest",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ITroveManager.Trove",
+              "name": "trove",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct MultiTroveGetters.TroveState",
+          "name": "state",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ITroveManager",
+          "name": "troveManager",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "endIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTroves",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "CCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "MCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "SCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "TCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "LIQUIDATION_PENALTY_SP",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalColl",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalInterest",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSystemDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "interestRate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minNetDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "accountCollSurplus",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasShutdown",
+              "type": "bool"
+            },
+            {
+              "internalType": "contract ITroveManager",
+              "name": "troveManager",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct MultiTroveGetters.Params",
+          "name": "params",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ICR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "entireDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxDebtToMint",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxCollToWithdraw",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "liquidationPrice",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "debt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "coll",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "stake",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "interest",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ITroveManager.Trove",
+              "name": "trove",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct MultiTroveGetters.TroveState[]",
+          "name": "states",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ITroveManager",
+          "name": "troveManager",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "getTrovesByOwner",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "CCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "MCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "SCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "TCR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "LIQUIDATION_PENALTY_SP",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalColl",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalInterest",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSystemDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "interestRate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minNetDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "accountCollSurplus",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "hasShutdown",
+              "type": "bool"
+            },
+            {
+              "internalType": "contract ITroveManager",
+              "name": "troveManager",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct MultiTroveGetters.Params",
+          "name": "params",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "ICR",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "entireDebt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxDebtToMint",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxCollToWithdraw",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "liquidationPrice",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "debt",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "coll",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "stake",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "interest",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ITroveManager.Trove",
+              "name": "trove",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct MultiTroveGetters.TroveState[]",
+          "name": "states",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
